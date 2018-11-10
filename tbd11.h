@@ -3,10 +3,12 @@
 #include<string>
 #include <bits/stdc++.h>
 #include<conio.h>
+#include<fstream>
+#include<queue>
 void chushi(double d);
 void chushihua();
 void addd(bool zt,double money);
-std::string nowmoney();
+void nowmoney();
 void getminus(double mmm);
 void exitp(); 
 #endif

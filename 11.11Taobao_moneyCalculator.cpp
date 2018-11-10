@@ -7,8 +7,11 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
+	system("title 11.11Taobao_moneyCalculator by Sky_fackr");
+	system("color 02");
+	cout<<"制作：Sky_Fakcr"<<endl; 
 	cout<<fixed<<setprecision(2);
-	cout<<"输入红包个数：";
+/*	cout<<"输入红包个数：";
 	int n;cin>>n;
 	for (regi i=1;i<=n;i++)
 	{
@@ -16,7 +19,7 @@ int main(int argc, char** argv)
 		cout<<"请输入第"<<i<<"个：\n";
 		cin>>mon;
 		chushi(mon); 
-	}
+	}*/
 	chushihua();
 	cout<<endl; 
 	while (1)
@@ -24,7 +27,7 @@ int main(int argc, char** argv)
 		double did;int zt;
 		cin>>did>>zt;
 		if (zt!=0&&zt!=1) exitp();
-		if (did==-1) cout<<nowmoney()<<endl;
+		if (did==-1) nowmoney();
 		else addd(zt,did);
 	}
 	return 0;

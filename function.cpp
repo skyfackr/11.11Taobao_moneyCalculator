@@ -24,22 +24,27 @@ void addd(bool zt,double money)
 	cout<<"普通金额加入成功\n当前总金额："<<nomoney+yesmoney-minuss<<"\n已优惠："<<minuss<<"\n未受到满减金额："<<yesmoney<<endl; 
 		return ;
 }
-string nowmoney()
+void nowmoney()
 {
-	string s;
-	s.clear();
-	s+="当前总金额：";
-	s+= nomoney+yesmoney-minuss;
-	s+="\n已经优惠：";
-	s+=minuss;
-	s+="\n未得到满减：";
-	s+=yesmoney;
-	return s; 
+	
+//	s.clear();
+	cout<<"当前总金额：";
+	double d;
+	d=max(nomoney+yesmoney-minuss,0.0);
+	cout<<d;
+	cout<<"\n已经优惠：";
+	d=minuss;
+	cout<<d;
+	cout<<"\n未得到满减：";
+	d=yesmoney;
+	cout<<d;
+	cout<<endl;
+	return ; 
 }
 void exitp()
 {
 	system("cls");
-	cout<<nowmoney()<<endl;
+	nowmoney();
 	cout<<"按任意键退出程序\n";
 	while (!_kbhit()) continue;
 	exit(0); 
