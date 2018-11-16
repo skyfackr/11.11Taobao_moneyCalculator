@@ -49,3 +49,9 @@ void exitp()
 	while (!_kbhit()) continue;
 	exit(0); 
 }
+
+
+
+
+
+

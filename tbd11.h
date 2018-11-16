@@ -11,4 +11,8 @@ void addd(bool zt,double money);
 void nowmoney();
 void getminus(double mmm);
 void exitp(); 
+
+
+
+
 #endif

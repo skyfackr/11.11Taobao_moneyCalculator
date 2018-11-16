@@ -4,10 +4,18 @@
 #include "tbd11.h"
 using namespace std;
 priority_queue<double> readp;
+void sleep(int needtime)
+{
+	int i = 0;
+	while (i <= needtime*1000) i++;
+	return;
+}
 void chushi()
 {
+	cout << "准备试图读取数据库。。。";
 	ifstream in;
 	in.open("radpacketdata.tbd11data",ios::in);
+	if (!in.is_open()) cout << "linkfailed" << endl, system("pause"),exit(0);
 	while (!in.eof())
 	{
 		double d;
@@ -15,7 +23,7 @@ void chushi()
 		readp.push(d);
 		cout<<endl;
 		cout<<"红包读入"<<d<<"元成功\n"<<endl;
-		_sleep(5);
+		sleep(100);
 	}
 	in.close();
 	return ; 
@@ -52,3 +60,6 @@ void chushihua()
 	while (!_kbhit()) continue;
 	return ; 
 }
+
+
+
